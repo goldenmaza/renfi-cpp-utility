@@ -1,10 +1,10 @@
 /**
  * @author (Mats Richard Hellstrand)
- * @version (11th of September, 2023)
+ * @version (13th of September, 2023)
  */
 
-#ifndef HEADERS_ARGS_CONSTANTS_H_
-#define HEADERS_ARGS_CONSTANTS_H_
+#ifndef HEADERS_ARGS_CONSTANTS_HPP_
+#define HEADERS_ARGS_CONSTANTS_HPP_
 
 #include <string_view>
 
@@ -41,4 +41,4 @@ constexpr string_view FULL_HELP_FLAG = "help";
 constexpr string_view HYPHEN_HELP_FLAG = "-h";
 constexpr string_view HYPHEN_FULL_HELP_FLAG = "-help";
 
-#endif /* HEADERS_ARGS_CONSTANTS_H_ */
+#endif /* HEADERS_ARGS_CONSTANTS_HPP_ */

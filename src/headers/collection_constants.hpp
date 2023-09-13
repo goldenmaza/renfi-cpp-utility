@@ -1,16 +1,17 @@
 /**
  * @author (Mats Richard Hellstrand)
- * @version (11th of September, 2023)
+ * @version (13th of September, 2023)
  */
 
-#ifndef HEADERS_COLLECTION_CONSTANTS_H_
-#define HEADERS_COLLECTION_CONSTANTS_H_
+#ifndef HEADERS_COLLECTION_CONSTANTS_HPP_
+#define HEADERS_COLLECTION_CONSTANTS_HPP_
 
 #include <vector>
 #include <map>
 #include <string_view>
 
-#include "args_constants.h"
+#include "args_constants.hpp"
+#include "message_constants.hpp"
 
 using namespace std;
 
@@ -53,4 +54,4 @@ map<string_view, vector<string_view>> PROCESSING_SUPPORT = {
 	{VIDEO_PROCESSING, {EXTENSION_AVI, EXTENSION_MP4, EXTENSION_MOV, EXTENSION_MPG, EXTENSION_WMV, EXTENSION_MKV}}
 };
 
-#endif /* HEADERS_COLLECTION_CONSTANTS_H_ */
+#endif /* HEADERS_COLLECTION_CONSTANTS_HPP_ */

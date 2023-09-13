@@ -1,10 +1,10 @@
 /**
  * @author (Mats Richard Hellstrand)
- * @version (11th of September, 2023)
+ * @version (13th of September, 2023)
  */
 
-#ifndef HEADERS_MESSAGE_CONSTANTS_H_
-#define HEADERS_MESSAGE_CONSTANTS_H_
+#ifndef HEADERS_MESSAGE_CONSTANTS_HPP_
+#define HEADERS_MESSAGE_CONSTANTS_HPP_
 
 #include <string_view>
 
@@ -82,4 +82,4 @@ constexpr string_view MESSAGE_FAILED_MISMATCH = "The amount of generated names a
 constexpr string_view MESSAGE_RENAMING_ABORT = "You chose not to rename files, aborting the renaming process";
 constexpr string_view MESSAGE_EXECUTION_ABORT = "You chose not to continue with the execution, aborting the process";
 
-#endif /* HEADERS_MESSAGE_CONSTANTS_H_ */
+#endif /* HEADERS_MESSAGE_CONSTANTS_HPP_ */
