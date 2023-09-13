@@ -11,15 +11,15 @@
 using namespace std;
 
 // Application indexes for determining flow and processing...
-constexpr int FLOW_INDEX = 0;
-constexpr int BRANCH_INDEX = 1;
-constexpr int PATH_INDEX = 2;
-constexpr int RESOURCE_TYPE_INDEX = 3;
-constexpr int EXTENSION_FROM_INDEX = 4;
-constexpr int EXTENSION_TO_INDEX = 5;
-constexpr int UPPER_LEFT_X_INDEX = 6;
-constexpr int UPPER_LEFT_Y_INDEX = 7;
-constexpr int DATE_TYPE_INDEX = 8;
+constexpr int FLOW_INDEX = 1;
+constexpr int BRANCH_INDEX = 2;
+constexpr int PATH_INDEX = 3;
+constexpr int RESOURCE_TYPE_INDEX = 4;
+constexpr int EXTENSION_FROM_INDEX = 5;
+constexpr int EXTENSION_TO_INDEX = 6;
+constexpr int UPPER_LEFT_X_INDEX = 7;
+constexpr int UPPER_LEFT_Y_INDEX = 8;
+constexpr int DATE_TYPE_INDEX = 9;
 
 // Application flags for handling files...
 constexpr string_view FILE_PROCESSING = "-f";
