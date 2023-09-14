@@ -1,6 +1,6 @@
 /**
  * @author (Mats Richard Hellstrand)
- * @version (13th of September, 2023)
+ * @version (14th of September, 2023)
  */
 
 #ifndef HEADERS_MESSAGE_CONSTANTS_HPP_
@@ -56,8 +56,8 @@ constexpr string_view MESSAGE_RESOURCES_UNAVAILABLE = "No resources found with t
 constexpr string_view MESSAGE_SOURCE_UNAVAILABLE = "No source file found under the current path";
 constexpr string_view MESSAGE_SOURCE_AVAILABLE = "A source file was found under the current path";
 constexpr string_view MESSAGE_SOURCE_CONTAINS = "Source file contains";
-constexpr string_view MESSAGE_PROCESSING_TASK = "The task you have selected is: '%s' by '%s' of '%s' under the following path: '%s'.%n";
-constexpr string_view MESSAGE_PROCESSING_ATTRIBUTES = "The following attributes are also selected: '%s' to '%s', '%s' flag, X='%s' & Y='%s' axis values.%n";
+constexpr string_view MESSAGE_PROCESSING_TASK = "The task you have selected is: '%s' by '%s' of '%s' under the following path: '%s'.\n";
+constexpr string_view MESSAGE_PROCESSING_ATTRIBUTES = "The following attributes are also selected: '%s' to '%s', '%s' flag, X='%s' & Y='%s' axis values.\n";
 constexpr string_view MESSAGE_LOADING_DIRECTORY = "Loading directory";
 constexpr string_view MESSAGE_LOADING_FILES = "Available files";
 constexpr string_view MESSAGE_SORTING_FILES = "Sorting files";

@@ -43,6 +43,39 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 
+	vector<string_view> selectedExtensions = PROCESSING_SUPPORT[resourceType];
+	unsigned long int extensionFromIndex = stoi(fromIndex), extensionToIndex = stoi(toIndex);
+	if (extensionFromIndex < 0 && extensionToIndex >= selectedExtensions.size()) {
+		return EXIT_FAILURE;
+	}
+
+	string_view flowTask = flow == FILE_PROCESSING ? LABEL_FILE_PROCESSING :
+		flow == DATA_PROCESSING ? LABEL_DATA_PROCESSING :
+			LABEL_UNKNOWN_EXECUTION;
+	string_view branchTask = branch == COMPARE_PROCESSING ? LABEL_COMPARE :
+		branch == CROP_PROCESSING ? LABEL_CROP :
+			branch == CONVERT_PROCESSING ? LABEL_CONVERT :
+				branch == DETECT_PROCESSING ? LABEL_DETECT :
+					branch == ORIGIN_PROCESSING ? LABEL_CREATED :
+						branch == LIST_PROCESSING ? LABEL_FILE :
+							branch == SOURCE_PROCESSING ? LABEL_FILENAMES :
+								LABEL_UNKNOWN_EXECUTION;
+	string_view resourceTask = resourceType == IMAGE_PROCESSING ? LABEL_IMAGES : LABEL_VIDEOS;
+	string_view fromExtension = selectedExtensions[extensionFromIndex];
+	string_view toExtension = selectedExtensions[extensionToIndex];
+	printf(
+		string(MESSAGE_PROCESSING_TASK).c_str(),
+		string(flowTask).c_str(), string(branchTask).c_str(), string(resourceTask).c_str(), string(path).c_str());
+	printf(
+		string(MESSAGE_PROCESSING_ATTRIBUTES).c_str(),
+		string(fromExtension.substr(1)).c_str(), string(toExtension.substr(1)).c_str(),
+		string(dateType).c_str(), string(leftXAxis).c_str(), string(leftYAxis).c_str());
+
+    string key;
+    cin >> key;
+    if (key == "y") {//TODO: Implement task handling...
+    }
+
 	cout << "Done!" << endl;
 
 	return EXIT_SUCCESS;
