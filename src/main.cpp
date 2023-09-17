@@ -4,6 +4,7 @@
 #include <string_view>
 #include <sys/stat.h>
 
+#include "headers/util/help_guide_util.hpp"
 #include "headers/args_constants.hpp"
 #include "headers/collection_constants.hpp"
 #include "headers/collection_util.hpp"
@@ -17,11 +18,11 @@ using namespace std;
 
 /**
  * @author (Mats Richard Hellstrand)
- * @version (15th of September, 2023)
+ * @version (17th of September, 2023)
  */
 int main(int argc, char* argv[]) {
-	if (argc != 10) {
-		// TODO: Implement HelpGuide...
+	if (argc != 10 || CollectionUtil::vectorContainsItem(HELP_FLAGS, argv[1])) {
+		cout << HelpGuideUtil::displayHelpGuide() << endl;
 		return EXIT_FAILURE;
 	}
 
@@ -49,7 +50,7 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	vector<string_view> selectedExtensions = PROCESSING_SUPPORT[resourceType];
+	vector<string_view> selectedExtensions = PROCESSING_SUPPORT.at(resourceType);
 	unsigned long int extensionFromIndex = stoi(fromIndex), extensionToIndex = stoi(toIndex);
 	if (extensionFromIndex < 0 && extensionToIndex >= selectedExtensions.size()) {
 		cout << "Aborted!" << endl;
